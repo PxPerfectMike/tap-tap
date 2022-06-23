@@ -1,19 +1,50 @@
+html {
+  height: 100%;
+  --white: #ffffffee;
+  --foggy: #E3DEDE33;
+}
+
 body {
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100%;
+  max-width: 100%;
   background-image: linear-gradient(180deg, #380846 0%, #1540aa 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  user-select: none;
 }
 
 .main-button {
-  width: 43.192vw;
-  height: 19.973vh;
-  background: rgb(255, 255, 255);
-  border-radius: 30px;
-  margin: 70vh auto;
+  width: 119px;
+  height: 119px;
+  background: var(--white);
+  border-radius: 17px;
+  margin: 6vh auto 0 auto;
+  user-select: none;
+}
+
+.progressBar {
+  --sidepads: 0.6rem;
+  width: 81vw;
+  height: 3vh;
+  display: grid;
+  overflow: hidden;
+  margin: 55vh auto 0 auto;
+  list-style: none;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2.43vw;
+  padding: 0.4rem var(--sidepads) 1.3rem var(--sidepads);
+  background: var(--foggy);
+  border-radius: 0.7rem;
+  user-select: none;
+}
+
+.progressDot {
+  background: var(--white);
+  border-radius: 50%;
   user-select: none;
 }
